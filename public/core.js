@@ -6,10 +6,12 @@ function mainController($scope, $http) {
 
     // when landing on the page, get all todos and show them
     $http.get('/api/todos').success(function(data) {
-        for (var i = 0; i < $scope.formData.length; i++) {
-            $scope.todos = $scope.formData.priority[i];
-            console.log($scope.formData[i]);
-        });
+            $scope.todos = data;
+        //     for(var i = 0 ; i < formData.priority.length ; i ++){
+        //     console.log(data.priority[i]);
+        // };
+            console.log(data);
+        })
         .error(function(data) {
             console.log('Error: ' + data);
         });

@@ -6,3 +6,7 @@ body {
 a {
   color: #00B7FF;
 }
+
+header h1{
+	padding: 30px;
+}
